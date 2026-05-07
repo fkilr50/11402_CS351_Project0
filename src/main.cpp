@@ -8,6 +8,7 @@ std::vector<int> twoSum(std::vector<int>& nums, int target);
 
 /**
  * Displays usage instructions to the user.
+ * 
  */
 void PrintUsage() {
   std::cout << "\n=== Two Sum Problem Solver ===\n" << std::endl;
