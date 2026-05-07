@@ -1,6 +1,7 @@
 #include <vector>
 #include <iostream>
 #include <chrono>
+#include <climits>
 
 // Forward declaration
 std::vector<int> twoSum(std::vector<int>& nums, int target);
@@ -32,10 +33,11 @@ void test_stress_cases() {
         auto end = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
         
-        bool valid = !result.empty() && result.size() == 2 && 
-                    nums[result[0]] + nums[result[1]] == target;
-        std::cout << "✓ STRESS-001: 1000 elements - Completed in " << duration.count() << "ms" << std::endl;
-        tests_passed++;
+        if (!result.empty() && result.size() == 2 && 
+            nums[result[0]] + nums[result[1]] == target) {
+            std::cout << "✓ STRESS-001: 1000 elements - Completed in " << duration.count() << "ms" << std::endl;
+            tests_passed++;
+        }
         tests_total++;
     }
     
@@ -52,10 +54,11 @@ void test_stress_cases() {
         auto end = std::chrono::high_resolution_clock::now();
         auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
         
-        bool valid = !result.empty() && result.size() == 2 && 
-                    nums[result[0]] + nums[result[1]] == target;
-        std::cout << "✓ STRESS-002: 10000 elements - Completed in " << duration.count() << "ms" << std::endl;
-        tests_passed++;
+        if (!result.empty() && result.size() == 2 && 
+            nums[result[0]] + nums[result[1]] == target) {
+            std::cout << "✓ STRESS-002: 10000 elements - Completed in " << duration.count() << "ms" << std::endl;
+            tests_passed++;
+        }
         tests_total++;
     }
     

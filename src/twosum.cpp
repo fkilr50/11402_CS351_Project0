@@ -20,7 +20,7 @@ std::vector<int> twoSum(std::vector<int>& nums, int target) {
   std::unordered_map<int, int> seen;
 
   // Iterate through array once
-  for (int i = 0; i < nums.size(); ++i) {
+  for (size_t i = 0; i < nums.size(); ++i) {
     // Calculate the complement needed to reach target
     int complement = target - nums[i];
 
