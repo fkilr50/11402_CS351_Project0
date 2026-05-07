@@ -1,4 +1,4 @@
-# Docker build context ignore patterns
+fil# Docker build context ignore patterns
 .git
 .gitignore
 .github
