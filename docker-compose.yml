@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # Build and test service
+  build-and-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: twosum-build-test
+    volumes:
+      - ./build:/app/build
+      - ./src:/app/src
+      - ./docs:/app/docs
+    environment:
+      - BUILD_TYPE=Release
+    command: /app/build/two_sum_tests
+
+  # Development service (interactive)
+  dev:
+    image: ubuntu:22.04
+    container_name: twosum-dev
+    working_dir: /app
+    volumes:
+      - .:/app
+    environment:
+      - CMAKE_BUILD_TYPE=Release
+    command: /bin/bash
+    stdin_open: true
+    tty: true
+    # Run: docker-compose run dev

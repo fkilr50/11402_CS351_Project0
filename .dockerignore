@@ -1,0 +1,19 @@
+fil# Docker build context ignore patterns
+.git
+.gitignore
+.github
+build/
+.vscode/
+*.exe
+*.o
+*.a
+*.so
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+*.swp
+*.swo
+*~
+.DS_Store
+node_modules/
+.env.local
