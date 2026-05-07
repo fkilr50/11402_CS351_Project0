@@ -37,8 +37,7 @@ void test_edge_cases() {
         // EC-003: Mix of negative, zero, positive
         std::vector<int> nums = {-5, 0, 5, 10};
         std::vector<int> result = twoSum(nums, 0);
-        bool valid = (result == std::vector<int>{0, 1} || result == std::vector<int>{1, 2});
-        assert_true(valid, "EC-003: Mix of values [-5,0,5,10] target=0");
+        assert_equal(result, {0, 2}, "EC-003: Mix of values [-5,0,5,10] target=0");
     }
     
     {
