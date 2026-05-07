@@ -23,7 +23,7 @@ void test_single_amount_cases() {
         // SA-001: Target is 5
         std::vector<int> nums = {1, 2, 3, 4, 5};
         std::vector<int> result = twoSum(nums, 5);
-        assert_equal(result, {0, 4}, "SA-001: Target=5 [1,2,3,4,5]");
+        assert_equal(result, {1, 2}, "SA-001: Target=5 [1,2,3,4,5]");
     }
     
     {

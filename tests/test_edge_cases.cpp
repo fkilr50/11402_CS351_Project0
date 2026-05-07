@@ -60,7 +60,8 @@ void test_edge_cases() {
         // EC-006: Reverse sorted array
         std::vector<int> nums = {5, 4, 3, 2, 1};
         std::vector<int> result = twoSum(nums, 7);
-        assert_equal(result, {0, 3}, "EC-006: Reverse sorted [5,4,3,2,1] target=7");
+        bool valid = (result == std::vector<int>{0, 3} || result == std::vector<int>{1, 2});
+        assert_true(valid, "EC-006: Reverse sorted [5,4,3,2,1] target=7");
     }
     
     {

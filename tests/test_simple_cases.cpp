@@ -43,7 +43,7 @@ void test_simple_cases() {
         // SC-004: Elements at end
         std::vector<int> nums = {5, 1, 8, 10};
         std::vector<int> result = twoSum(nums, 15);
-        assert_equal(result, {2, 3}, "SC-004: Elements at end [5,1,8,10] target=15");
+        assert_equal(result, {0, 3}, "SC-004: Elements at end [5,1,8,10] target=15");
     }
     
     {
