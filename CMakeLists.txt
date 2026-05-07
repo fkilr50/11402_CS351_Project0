@@ -15,9 +15,13 @@ add_executable(two_sum_app
     src/twosum.cpp
 )
 
-# Test executable
+# Test executable (using modular test files from tests/ folder)
 add_executable(two_sum_tests
-    src/test_twosum.cpp
+    tests/test_main.cpp
+    tests/test_simple_cases.cpp
+    tests/test_edge_cases.cpp
+    tests/test_single_amount_cases.cpp
+    tests/test_stress_cases.cpp
     src/twosum.cpp
 )
 
